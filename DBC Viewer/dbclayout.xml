@@ -959,39 +959,6 @@
     <field type="uint" name="id" />
     <field type="string" name="message" />
   </ServerMessages>
-  <creaturecache build="13221">
-    <index>
-      <primary>Entry</primary>
-    </index>
-    <field type="int" name="Entry" />
-    <field type="string" name="Name" />
-    <field type="string" name="Name2" visible="false" />
-    <field type="string" name="Name3" visible="false" />
-    <field type="string" name="Name4" visible="false" />
-    <field type="string" name="SubName" />
-    <field type="string" name="IconName" />
-    <field type="int" name="Flags" />
-    <field type="int" name="Type" />
-    <field type="int" name="Family" />
-    <field type="int" name="Rank" />
-    <field type="int" name="KillCredit1" />
-    <field type="int" name="KillCredit2" />
-    <field type="int" name="Modelid1" />
-    <field type="int" name="Modelid2" />
-    <field type="int" name="Modelid3" />
-    <field type="int" name="Modelid4" />
-    <field type="float" name="HealthModifier" />
-    <field type="float" name="PowerModifier" />
-    <field type="byte" name="RacialLeader" />
-    <field type="int" name="QuestItem_1" />
-    <field type="int" name="QuestItem_2" />
-    <field type="int" name="QuestItem_3" />
-    <field type="int" name="QuestItem_4" />
-    <field type="int" name="QuestItem_5" />
-    <field type="int" name="QuestItem_6" />
-    <field type="int" name="MovementId" />
-    <field type="int" name="Unk1" />
-  </creaturecache>
   <TeamContributionPoints build="12340">
     <index>
       <primary>m_level</primary>
@@ -1091,4 +1058,323 @@
     <field type="int" name="field21" />
     <field type="int" name="field22" />
   </Achievement_Criteria>
+  <creaturecache build="13221">
+    <index>
+      <primary>Entry</primary>
+    </index>
+    <field type="int" name="Entry" />
+    <field type="string" name="Name" />
+    <field type="string" name="Name2" visible="false" />
+    <field type="string" name="Name3" visible="false" />
+    <field type="string" name="Name4" visible="false" />
+    <field type="string" name="SubName" />
+    <field type="string" name="IconName" />
+    <field type="int" name="Flags" />
+    <field type="int" name="Type" />
+    <field type="int" name="Family" />
+    <field type="int" name="Rank" />
+    <field type="int" name="KillCredit1" />
+    <field type="int" name="KillCredit2" />
+    <field type="int" name="Modelid1" />
+    <field type="int" name="Modelid2" />
+    <field type="int" name="Modelid3" />
+    <field type="int" name="Modelid4" />
+    <field type="float" name="HealthModifier" />
+    <field type="float" name="PowerModifier" />
+    <field type="byte" name="RacialLeader" />
+    <field type="int" name="QuestItem_1" />
+    <field type="int" name="QuestItem_2" />
+    <field type="int" name="QuestItem_3" />
+    <field type="int" name="QuestItem_4" />
+    <field type="int" name="QuestItem_5" />
+    <field type="int" name="QuestItem_6" />
+    <field type="int" name="MovementId" />
+    <field type="int" name="Unk1" />
+  </creaturecache>
+  <gameobjectcache name="13164">
+    <index>
+      <primary>entry</primary>
+    </index>
+    <field type="int"    name="entry" />
+    <field type="uint"   name="type"/>
+    <field type="uint"   name="displayId"/>
+    <field type="string" name="name"/>
+    <field type="string" name="name1"/>
+    <field type="string" name="name2"/>
+    <field type="string" name="name3"/>
+    <field type="string" name="name4"/>
+    <field type="string" name="castBarCaption"/>
+    <field type="string" name="name6"/>
+    <field type="uint"   name="data0"/>
+    <field type="uint"   name="data1"/>
+    <field type="uint"   name="data2"/>
+    <field type="uint"   name="data3"/>
+    <field type="uint"   name="data4"/>
+    <field type="uint"   name="data5"/>
+    <field type="uint"   name="data6"/>
+    <field type="uint"   name="data7"/>
+    <field type="uint"   name="data8"/>
+    <field type="uint"   name="data9"/>
+    <field type="uint"   name="data10"/>
+    <field type="uint"   name="data11"/>
+    <field type="uint"   name="data12"/>
+    <field type="uint"   name="data13"/>
+    <field type="uint"   name="data14"/>
+    <field type="uint"   name="data15"/>
+    <field type="uint"   name="data16"/>
+    <field type="uint"   name="data17"/>
+    <field type="uint"   name="data18"/>
+    <field type="uint"   name="data19"/>
+    <field type="uint"   name="data20"/>
+    <field type="uint"   name="data21"/>
+    <field type="uint"   name="data22"/>
+    <field type="uint"   name="data23"/>
+    <field type="float"  name="Size"/>
+    <field type="uint"   name="QuestItem1"/>
+    <field type="uint"   name="QuestItem2"/>
+    <field type="uint"   name="QuestItem3"/>
+    <field type="uint"   name="QuestItem4"/>
+    <field type="uint"   name="QuestItem5"/>
+    <field type="uint"   name="QuestItem6"/>
+    <field type="uint"   name="Unk"/>
+  </gameobjectcache>
+  <questcache build="13164">
+    <index>
+      <primary>entry</primary>
+    </index>
+    <field type="int"    name="entry"/>
+    <field type="uint"   name="doubleEntry"/>
+    <field type="uint"   name="Method"/>
+    <field type="uint"   name="QuestLevel"/>
+    <field type="int"    name="MinLevel"/>
+    <field type="int"    name="ZoneOrSort"/>
+    <field type="uint"   name="Type"/>
+    <field type="uint"   name="SuggestedPlayers"/>
+    <field type="uint"   name="RepObjectiveFaction1"/>
+    <field type="int"    name="RepObjectiveValue1"/>
+    <field type="uint"   name="RepObjectiveFaction2"/>
+    <field type="int"    name="RepObjectiveValue2"/>
+    <field type="uint"   name="NextQuestInChain"/>
+    <field type="int"    name="RewXPId"/>
+    <field type="int"    name="RewOrReqMoney"/>
+    <field type="uint"   name="RewMoneyMaxLevel"/>
+    <field type="uint"   name="RewSpell"/>
+    <field type="uint"   name="RewSpellCast"/>
+    <field type="uint"   name="RewHonorAddition"/>
+    <field type="float"  name="RewHonorMultiplier"/>
+    <field type="uint"   name="SrcItemId"/>
+    <field type="uint"   name="QuestFlags1"/>
+    <field type="uint"   name="QuestFlags2"/>
+    <field type="int"    name="CharTitleId"/>
+    <field type="int"    name="PlayersSlain"/>
+    <field type="int"    name="BonusTalents"/>
+    <field type="int"    name="BonusArenaPoints"/>
+    <field type="uint"   name="skill_reward"/>
+    <field type="uint"   name="skill_points_reward"/>
+    <field type="uint"   name="unk1"/>
+    <field type="uint"   name="unk2"/>
+    <field type="uint"   name="unk3"/>
+    <field type="int"    name="RewItemId1"/>
+    <field type="uint"   name="RewItemCount1"/>
+    <field type="int"    name="RewItemId2"/>
+    <field type="uint"   name="RewItemCount2"/>
+    <field type="int"    name="RewItemId3"/>
+    <field type="uint"   name="RewItemCount3"/>
+    <field type="int"    name="RewItemId4"/>
+    <field type="uint"   name="RewItemCount4"/>
+    <field type="uint"   name="RewChoiceItemId1"/>
+    <field type="uint"   name="RewChoiceItemCount1"/>
+    <field type="uint"   name="RewChoiceItemId2"/>
+    <field type="uint"   name="RewChoiceItemCount2"/>
+    <field type="uint"   name="RewChoiceItemId3"/>
+    <field type="uint"   name="RewChoiceItemCount3"/>
+    <field type="uint"   name="RewChoiceItemId4"/>
+    <field type="uint"   name="RewChoiceItemCount4"/>
+    <field type="uint"   name="RewChoiceItemId5"/>
+    <field type="uint"   name="RewChoiceItemCount5"/>
+    <field type="uint"   name="RewChoiceItemId6"/>
+    <field type="uint"   name="RewChoiceItemCount6"/>
+    <field type="uint"   name="RawFactionId1"/>
+    <field type="uint"   name="RawFactionId2"/>
+    <field type="uint"   name="RawFactionId3"/>
+    <field type="uint"   name="RawFactionId4"/>
+    <field type="uint"   name="RawFactionId5"/>
+    <field type="int"    name="RawFactionVal1"/>
+    <field type="int"    name="RawFactionVal2"/>
+    <field type="int"    name="RawFactionVal3"/>
+    <field type="int"    name="RawFactionVal4"/>
+    <field type="int"    name="RawFactionVal5"/>
+    <field type="uint"   name="RawFactionValOverride1"/>
+    <field type="uint"   name="RawFactionValOverride2"/>
+    <field type="uint"   name="RawFactionValOverride3"/>
+    <field type="uint"   name="RawFactionValOverride4"/>
+    <field type="uint"   name="RawFactionValOverride5"/>
+    <field type="uint"   name="PointMapId"/>
+    <field type="float"  name="PointX"/>
+    <field type="float"  name="PointY"/>
+    <field type="int"    name="PointOpt"/>
+    <field type="string" name="Title"/>
+    <field type="string" name="Objectives"/>
+    <field type="string" name="Details"/>
+    <field type="string" name="EndText"/>
+    <field type="string" name="CompletedText"/>
+    <field type="int"    name="ReqCreatureOrGOId1"/>
+    <field type="uint"   name="ReqCreatureOrGOCount1"/>
+    <field type="int"    name="ReqSourceId1"/>
+    <field type="uint"   name="ReqSourceIdMaxCount1"/>
+    <field type="int"    name="ReqCreatureOrGOId2"/>
+    <field type="uint"   name="ReqCreatureOrGOCount2"/>
+    <field type="int"    name="ReqSourceId2"/>
+    <field type="uint"   name="ReqSourceIdMaxCount2"/>
+    <field type="int"    name="ReqCreatureOrGOId3"/>
+    <field type="uint"   name="ReqCreatureOrGOCount3"/>
+    <field type="int"    name="ReqSourceId3"/>
+    <field type="uint"   name="ReqSourceIdMaxCount3"/>
+    <field type="int"    name="ReqCreatureOrGOId4"/>
+    <field type="uint"   name="ReqCreatureOrGOCount4"/>
+    <field type="int"    name="ReqSourceId4"/>
+    <field type="uint"   name="ReqSourceIdMaxCount4"/>
+    <field type="uint"   name="ReqItemId1"/>
+    <field type="uint"   name="ReqItemCount1"/>
+    <field type="uint"   name="ReqItemId2"/>
+    <field type="uint"   name="ReqItemCount2"/>
+    <field type="uint"   name="ReqItemId3"/>
+    <field type="uint"   name="ReqItemCount3"/>
+    <field type="uint"   name="ReqItemId4"/>
+    <field type="uint"   name="ReqItemCount4"/>
+    <field type="uint"   name="ReqItemId5"/>
+    <field type="uint"   name="ReqItemCount5"/>
+    <field type="uint"   name="ReqItemId6"/>
+    <field type="uint"   name="ReqItemCount6"/>
+    <field type="uint"   name="unk4"/>
+    <field type="string" name="ObjectiveText1"/>
+    <field type="string" name="ObjectiveText2"/>
+    <field type="string" name="ObjectiveText3"/>
+    <field type="string" name="ObjectiveText4"/>
+    <field type="uint"   name="RewCurrency1"/>
+    <field type="uint"   name="RewCurrencyCount1"/>
+    <field type="uint"   name="RewCurrency2"/>
+    <field type="uint"   name="RewCurrencyCount2"/>
+    <field type="uint"   name="RewCurrency3"/>
+    <field type="uint"   name="RewCurrencyCount3"/>
+    <field type="uint"   name="RewCurrency4"/>
+    <field type="uint"   name="RewCurrencyCount4"/>
+    <field type="uint"   name="ReqCurrency1"/>
+    <field type="uint"   name="ReqCurrencyCount1"/>
+    <field type="uint"   name="ReqCurrency2"/>
+    <field type="uint"   name="ReqCurrencyCount2"/>
+    <field type="uint"   name="ReqCurrency3"/>
+    <field type="uint"   name="ReqCurrencyCount3"/>
+    <field type="uint"   name="ReqCurrency4"/>
+    <field type="uint"   name="ReqCurrencyCount4"/>
+    <field type="string" name="npcframe_accept_text1"/>
+    <field type="string" name="npcframe_accept_text2"/>
+    <field type="string" name="npcframe_handin_text1"/>
+    <field type="string" name="npcframe_handin_text2"/>
+    <field type="uint"   name="unk5"/>
+    <field type="uint"   name="unk6"/>
+  </questcache>
+  <npccache build="0">
+    <index>
+      <primary>Id</primary>
+    </index>
+    <field type="int"    name="Id"/>
+    <field type="float"  name="prob_0"/>
+    <field type="string" name="text_0_0"/>
+    <field type="string" name="text_0_1"/>
+    <field type="uint"   name="lang_0"/>
+    <field type="uint"   name="em_0_0"/>
+    <field type="uint"   name="em_0_1"/>
+    <field type="uint"   name="em_0_2"/>
+    <field type="uint"   name="em_0_3"/>
+    <field type="uint"   name="em_0_4"/>
+    <field type="uint"   name="em_0_5"/>
+    <field type="float"  name="prob_1"/>
+    <field type="string" name="text_1_0"/>
+    <field type="string" name="text_1_1"/>
+    <field type="uint"   name="lang_1"/>
+    <field type="uint"   name="em_1_0"/>
+    <field type="uint"   name="em_1_1"/>
+    <field type="uint"   name="em_1_2"/>
+    <field type="uint"   name="em_1_3"/>
+    <field type="uint"   name="em_1_4"/>
+    <field type="uint"   name="em_1_5"/>
+    <field type="float"  name="prob_2"/>
+    <field type="string" name="text_2_0"/>
+    <field type="string" name="text_2_1"/>
+    <field type="uint"   name="lang_2"/>
+    <field type="uint"   name="em_2_0"/>
+    <field type="uint"   name="em_2_1"/>
+    <field type="uint"   name="em_2_2"/>
+    <field type="uint"   name="em_2_3"/>
+    <field type="uint"   name="em_2_4"/>
+    <field type="uint"   name="em_2_5"/>
+    <field type="float"  name="prob_3"/>
+    <field type="string" name="text_3_0"/>
+    <field type="string" name="text_3_1"/>
+    <field type="uint"   name="lang_3"/>
+    <field type="uint"   name="em_3_0"/>
+    <field type="uint"   name="em_3_1"/>
+    <field type="uint"   name="em_3_2"/>
+    <field type="uint"   name="em_3_3"/>
+    <field type="uint"   name="em_3_4"/>
+    <field type="uint"   name="em_3_5"/>
+    <field type="float"  name="prob_4"/>
+    <field type="string" name="text_4_0"/>
+    <field type="string" name="text_4_1"/>
+    <field type="uint"   name="lang_4"/>
+    <field type="uint"   name="em_4_0"/>
+    <field type="uint"   name="em_4_1"/>
+    <field type="uint"   name="em_4_2"/>
+    <field type="uint"   name="em_4_3"/>
+    <field type="uint"   name="em_4_4"/>
+    <field type="uint"   name="em_4_5"/>
+    <field type="float"  name="prob_5"/>
+    <field type="string" name="text_5_0"/>
+    <field type="string" name="text_5_1"/>
+    <field type="uint"   name="lang_5"/>
+    <field type="uint"   name="em_5_0"/>
+    <field type="uint"   name="em_5_1"/>
+    <field type="uint"   name="em_5_2"/>
+    <field type="uint"   name="em_5_3"/>
+    <field type="uint"   name="em_5_4"/>
+    <field type="uint"   name="em_5_5"/>
+    <field type="float"  name="prob_6"/>
+    <field type="string" name="text_6_0"/>
+    <field type="string" name="text_6_1"/>
+    <field type="uint"   name="lang_6"/>
+    <field type="uint"   name="em_6_0"/>
+    <field type="uint"   name="em_6_1"/>
+    <field type="uint"   name="em_6_2"/>
+    <field type="uint"   name="em_6_3"/>
+    <field type="uint"   name="em_6_4"/>
+    <field type="uint"   name="em_6_5"/>
+    <field type="float"  name="prob_7"/>
+    <field type="string" name="text_7_0"/>
+    <field type="string" name="text_7_1"/>
+    <field type="uint"   name="lang_7"/>
+    <field type="uint"   name="em_7_0"/>
+    <field type="uint"   name="em_7_1"/>
+    <field type="uint"   name="em_7_2"/>
+    <field type="uint"   name="em_7_3"/>
+    <field type="uint"   name="em_7_4"/>
+    <field type="uint"   name="em_7_5"/>
+  </npccache>
+  <pagetextcache build="0">
+    <index>
+      <primary>entry</primary>
+    </index>
+    <field type="int"    name="entry" />
+    <field type="string" name="text" />
+    <field type="int"    name="nextPage" />
+  </pagetextcache>
+  <itemnamecache build="0">
+    <field type="int"    name="entry"/>
+    <field type="string" name="Name"/>
+    <field type="uint"   name="unk"/>
+  </itemnamecache>
+  <itemtextcache build="0">
+    <field type="int"    name="id"/>
+    <field type="string" name="Text"/>
+  </itemtextcache>
 </DBFilesClient>
