@@ -1062,47 +1062,47 @@
     <index>
       <primary>Entry</primary>
     </index>
-    <field type="int" name="Entry" />
+    <field type="int"    name="Entry" />
     <field type="string" name="Name" />
     <field type="string" name="Name2" visible="false" />
     <field type="string" name="Name3" visible="false" />
     <field type="string" name="Name4" visible="false" />
     <field type="string" name="SubName" />
     <field type="string" name="IconName" />
-    <field type="int" name="Flags" />
-    <field type="int" name="Type" />
-    <field type="int" name="Family" />
-    <field type="int" name="Rank" />
-    <field type="int" name="KillCredit1" />
-    <field type="int" name="KillCredit2" />
-    <field type="int" name="Modelid1" />
-    <field type="int" name="Modelid2" />
-    <field type="int" name="Modelid3" />
-    <field type="int" name="Modelid4" />
-    <field type="float" name="HealthModifier" />
-    <field type="float" name="PowerModifier" />
-    <field type="byte" name="RacialLeader" />
-    <field type="int" name="QuestItem_1" />
-    <field type="int" name="QuestItem_2" />
-    <field type="int" name="QuestItem_3" />
-    <field type="int" name="QuestItem_4" />
-    <field type="int" name="QuestItem_5" />
-    <field type="int" name="QuestItem_6" />
-    <field type="int" name="MovementId" />
-    <field type="int" name="Unk1" />
+    <field type="int"    name="Flags" />
+    <field type="int"    name="Type" />
+    <field type="int"    name="Family" />
+    <field type="int"    name="Rank" />
+    <field type="int"    name="KillCredit1" />
+    <field type="int"    name="KillCredit2" />
+    <field type="int"    name="Modelid1" />
+    <field type="int"    name="Modelid2" />
+    <field type="int"    name="Modelid3" />
+    <field type="int"    name="Modelid4" />
+    <field type="float"  name="HealthModifier" />
+    <field type="float"  name="PowerModifier" />
+    <field type="byte"   name="RacialLeader" />
+    <field type="int"    name="QuestItem_1" />
+    <field type="int"    name="QuestItem_2" />
+    <field type="int"    name="QuestItem_3" />
+    <field type="int"    name="QuestItem_4" />
+    <field type="int"    name="QuestItem_5" />
+    <field type="int"    name="QuestItem_6" />
+    <field type="int"    name="MovementId" />
+    <field type="int"    name="Unk1" />
   </creaturecache>
   <gameobjectcache name="13164">
     <index>
-      <primary>entry</primary>
+      <primary>Entry</primary>
     </index>
-    <field type="int"    name="entry" />
+    <field type="int"    name="Entry" />
     <field type="uint"   name="type"/>
     <field type="uint"   name="displayId"/>
     <field type="string" name="name"/>
-    <field type="string" name="name1"/>
-    <field type="string" name="name2"/>
-    <field type="string" name="name3"/>
-    <field type="string" name="name4"/>
+    <field type="string" name="name2" visible="false"/>
+    <field type="string" name="name3" visible="false"/>
+    <field type="string" name="name4" visible="false"/>
+    <field type="string" name="name5" visible="false"/>
     <field type="string" name="castBarCaption"/>
     <field type="string" name="name6"/>
     <field type="uint"   name="data0"/>
@@ -1140,9 +1140,9 @@
   </gameobjectcache>
   <questcache build="13164">
     <index>
-      <primary>entry</primary>
+      <primary>Entry</primary>
     </index>
-    <field type="int"    name="entry"/>
+    <field type="int"    name="Entry"/>
     <field type="uint"   name="doubleEntry"/>
     <field type="uint"   name="Method"/>
     <field type="uint"   name="QuestLevel"/>
@@ -1362,19 +1362,25 @@
   </npccache>
   <pagetextcache build="0">
     <index>
-      <primary>entry</primary>
+      <primary>Entry</primary>
     </index>
-    <field type="int"    name="entry" />
+    <field type="int"    name="Entry" />
     <field type="string" name="text" />
     <field type="int"    name="nextPage" />
   </pagetextcache>
   <itemnamecache build="0">
-    <field type="int"    name="entry"/>
+    <index>
+      <primary>Entry</primary>
+    </index>
+    <field type="int"    name="Entry"/>
     <field type="string" name="Name"/>
     <field type="uint"   name="unk"/>
   </itemnamecache>
   <itemtextcache build="0">
-    <field type="int"    name="id"/>
+    <index>
+      <primary>Id</primary>
+    </index>
+    <field type="int"    name="Id"/>
     <field type="string" name="Text"/>
   </itemtextcache>
 </DBFilesClient>
