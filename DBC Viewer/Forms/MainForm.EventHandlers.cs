@@ -60,8 +60,38 @@ namespace DBCViewer
 
         private void dataGridView1_CurrentCellChanged(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentCell != null)
-                label1.Text = String.Format(CultureInfo.InvariantCulture, "Current Cell: {0}x{1}", dataGridView1.CurrentCell.RowIndex, dataGridView1.CurrentCell.ColumnIndex);
+            if (dataGridView1.CurrentCell == null) 
+                return;
+                
+            label1.Text = String.Format(CultureInfo.InvariantCulture, "Current Cell: {0}x{1}",
+                dataGridView1.CurrentCell.RowIndex, dataGridView1.CurrentCell.ColumnIndex);
+
+            int val = 0;
+
+            if (m_dataTable.Columns[dataGridView1.CurrentCell.ColumnIndex].DataType != typeof(string))
+            {
+                if (m_dataTable.Columns[dataGridView1.CurrentCell.ColumnIndex].DataType == typeof(int))
+                    val = Convert.ToInt32(dataGridView1.CurrentCell.Value, CultureInfo.InvariantCulture);
+                else if (m_dataTable.Columns[dataGridView1.CurrentCell.ColumnIndex].DataType == typeof(float))
+                    val = (int)BitConverter.ToUInt32(BitConverter.GetBytes((float)dataGridView1.CurrentCell.Value), 0);
+                else
+                    val = (int)Convert.ToUInt32(dataGridView1.CurrentCell.Value, CultureInfo.InvariantCulture);
+            }
+            else
+                if (!(m_reader is WDBReader))
+                {
+                    val = (from k in m_reader.StringTable
+                           where string.Compare(k.Value, (string)dataGridView1.CurrentCell.Value, StringComparison.Ordinal) == 0
+                           select k.Key).FirstOrDefault();
+                }
+
+            byte[] bytes = BitConverter.GetBytes(val);
+
+            _tbHex.Text    = string.Format(new BinaryFormatter(), "0x{0:X8}", val);
+            _tbBin.Text    = string.Format(new BinaryFormatter(), "{0:B}", val);
+            _tbInt.Text    = string.Format(CultureInfo.InvariantCulture, "{0}", BitConverter.ToInt32(bytes, 0));
+            _tbFloat.Text  = string.Format(CultureInfo.InvariantCulture, "{0}", BitConverter.ToSingle(bytes, 0));
+            _tbString.Text = string.Format(CultureInfo.InvariantCulture, "{0}", !(m_reader is WDBReader) ? m_reader.StringTable[(int)val] : String.Empty);
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
