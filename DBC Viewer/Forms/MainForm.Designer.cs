@@ -61,7 +61,6 @@
             this._tbInt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new DBCViewer.MyDataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.columnContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.hideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,12 +73,13 @@
             this.displayedCellsExceptHeaderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.displayedCellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new DBCViewer.MyDataGridView();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.columnContextMenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -352,34 +352,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Rows Displayed: 0";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.bindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 18;
-            this.dataGridView1.RowTemplate.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(691, 296);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.VirtualMode = true;
-            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
-            this.dataGridView1.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dataGridView1_CellToolTipTextNeeded);
-            this.dataGridView1.CurrentCellChanged += new System.EventHandler(this.dataGridView1_CurrentCellChanged);
-            this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
-            this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDown);
-            // 
             // backgroundWorker1
             // 
             this.backgroundWorker1.WorkerReportsProgress = true;
@@ -489,8 +461,37 @@
             this.fillToolStripMenuItem.Text = "Fill";
             this.fillToolStripMenuItem.Click += new System.EventHandler(this.autoSizeColumnsModeToolStripMenuItem_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.bindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 18;
+            this.dataGridView1.RowTemplate.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(691, 296);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.VirtualMode = true;
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
+            this.dataGridView1.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dataGridView1_CellToolTipTextNeeded);
+            this.dataGridView1.CurrentCellChanged += new System.EventHandler(this.dataGridView1_CurrentCellChanged);
+            this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
+            this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDown);
+            // 
             // MainForm
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(691, 429);
@@ -503,6 +504,8 @@
             this.Text = "DBC Viewer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -510,8 +513,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.columnContextMenuStrip.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

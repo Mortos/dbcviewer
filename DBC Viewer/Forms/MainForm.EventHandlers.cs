@@ -493,5 +493,18 @@ namespace DBCViewer
         {
             label2.Text = String.Format(CultureInfo.InvariantCulture, "Rows Displayed: {0}", dataGridView1.RowCount);
         }
+
+        private void MainForm_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            if (files.Length > 0)
+                LoadFile(files[0]);
+        }
+
+        private void MainForm_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop, false))
+                e.Effect = DragDropEffects.All;
+        }
     }
 }
