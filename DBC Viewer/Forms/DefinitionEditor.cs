@@ -378,5 +378,14 @@ namespace DBCViewer
                     DialogResult = DialogResult.Abort;
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count != 1)
+                return;
+
+            listView1.Items.Remove(listView1.SelectedItems[0]);
+            m_changed = true;
+        }
     }
 }
