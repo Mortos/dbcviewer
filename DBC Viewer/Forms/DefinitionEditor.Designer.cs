@@ -41,11 +41,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.bAutoGenarate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(156, 224);
+            this.button1.Location = new System.Drawing.Point(271, 224);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(48, 23);
             this.button1.TabIndex = 1;
@@ -61,15 +62,16 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.LabelWrap = false;
-            this.listView1.Location = new System.Drawing.Point(12, 12);
+            this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(515, 206);
+            this.listView1.Size = new System.Drawing.Size(485, 206);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -115,7 +117,7 @@
             "float",
             "double",
             "string"});
-            this.comboBox1.Location = new System.Drawing.Point(423, 226);
+            this.comboBox1.Location = new System.Drawing.Point(314, 141);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(103, 21);
             this.comboBox1.TabIndex = 3;
@@ -135,7 +137,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(252, 226);
+            this.textBox1.Location = new System.Drawing.Point(416, 226);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(56, 20);
             this.textBox1.TabIndex = 5;
@@ -144,7 +146,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(213, 229);
+            this.label1.Location = new System.Drawing.Point(377, 229);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 6;
@@ -162,7 +164,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(326, 226);
+            this.textBox2.Location = new System.Drawing.Point(314, 168);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(90, 20);
             this.textBox2.TabIndex = 8;
@@ -181,14 +183,25 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // bAutoGenarate
+            // 
+            this.bAutoGenarate.Location = new System.Drawing.Point(156, 224);
+            this.bAutoGenarate.Name = "bAutoGenarate";
+            this.bAutoGenarate.Size = new System.Drawing.Size(48, 23);
+            this.bAutoGenarate.TabIndex = 7;
+            this.bAutoGenarate.Text = "Auto";
+            this.bAutoGenarate.UseVisualStyleBackColor = true;
+            this.bAutoGenarate.Click += new System.EventHandler(this.bAutoGenarate_Click);
+            // 
             // DefinitionEditor
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 263);
+            this.ClientSize = new System.Drawing.Size(485, 263);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button4);
+            this.Controls.Add(this.bAutoGenarate);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -224,5 +237,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button bAutoGenarate;
     }
 }

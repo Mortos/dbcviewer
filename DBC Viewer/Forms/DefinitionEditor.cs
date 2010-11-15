@@ -85,13 +85,13 @@ namespace DBCViewer
             m_saved = true;
         }
 
-        public void InitDefinitions()
+        public void InitDefinitions(bool auto)
         {
             m_name = (Owner as MainForm).DBCName;
 
             XmlElement def = (Owner as MainForm).Definition;
 
-            if (def == null)
+            if (def == null || auto)
             {
                 var result = MessageBox.Show(this, "Create default definition?", "Definition Missing!",
                     MessageBoxButtons.YesNo,
@@ -113,6 +113,7 @@ namespace DBCViewer
             XmlNodeList indexes = def.GetElementsByTagName("index");
 
             var i = 0;
+            listView1.Items.Clear();
             foreach (XmlNode field in fields)
             {
                 listView1.Items.Add(new ListViewItem(new string[] {
@@ -174,7 +175,7 @@ namespace DBCViewer
 
         private void DefinitionEditor_Load(object sender, EventArgs e)
         {
-            InitDefinitions();
+            InitDefinitions(false);
         }
 
         private static bool IsIndexColumn(string name, XmlNodeList indexes)
@@ -386,6 +387,11 @@ namespace DBCViewer
 
             listView1.Items.Remove(listView1.SelectedItems[0]);
             m_changed = true;
+        }
+
+        private void bAutoGenarate_Click(object sender, EventArgs e)
+        {
+            InitDefinitions(true);
         }
     }
 }

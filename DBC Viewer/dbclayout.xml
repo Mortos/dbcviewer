@@ -1100,6 +1100,14 @@
     <field type="float" name="field6" />
     <field type="float" name="field7" />
   </CameraShakes>
+  <CreatureType build="0">
+    <index>
+      <primary>Entry</primary>
+    </index>
+    <field type="int" name="Entry" />
+    <field type="string" name="Name" />
+    <field type="int" name="field2" />
+  </CreatureType>
   <creaturecache build="13221">
     <index>
       <primary>Entry</primary>
