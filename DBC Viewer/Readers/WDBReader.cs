@@ -69,7 +69,7 @@ namespace dbc2sql
                 {
                     var entry = reader.ReadInt32();
                     var size = reader.ReadInt32();
-                    if (entry == 0 && size == 0 && reader.BaseStream.Position == reader.BaseStream.Length)
+                    if ((entry == 0 && size == 0) || reader.BaseStream.Position == reader.BaseStream.Length)
                         break;
                     var row = new byte[0]
                         .Concat(BitConverter.GetBytes(entry))

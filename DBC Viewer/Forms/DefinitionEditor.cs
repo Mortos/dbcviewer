@@ -351,8 +351,8 @@ namespace DBCViewer
                 var ClickedItem = m_listViewSubItem.Bounds; // Get the bounds of the item clicked
 
                 // Adjust the top and left of the control
-                ClickedItem.X += listView1.Left;
-                ClickedItem.Y += listView1.Top;
+                ClickedItem.X += listView1.Left + 2;
+                ClickedItem.Y += listView1.Top  + 1;
 
                 control.Bounds = ClickedItem;               // Set Control bounds to match calculation
 
