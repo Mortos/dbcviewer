@@ -4,10 +4,10 @@ namespace DBCViewer
 {
     public class MyDataGridView : DataGridView
     {
-        public MyDataGridView()
-            : base()
+        public MyDataGridView() : base()
         {
-            DoubleBuffered = true;
+            this.SetStyle(ControlStyles.DoubleBuffer | ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint, true);
+            this.UpdateStyles();
         }
     }
 }
